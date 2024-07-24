@@ -1,0 +1,42 @@
+#score{
+	text-align: center;
+}
+#game{
+	width: 1390px;
+	height: 700px;
+	border: 2px solid black;
+	margin: auto;
+	background-image: url(College.jpg);
+	background-size: cover;
+}
+#dino{
+	height: 495px;
+	width: 400px;
+	position: relative;
+	top: 245px;
+	background-image: url(PUNEET1.png);
+	background-size: cover;
+}
+#rock {
+    height: 200px;
+    width: 220px;
+    position: relative;
+    top: 21px;
+    left: 1180px;
+    background-image: url(bike.png);
+    background-size: cover;
+    animation: rock 1s infinite linear;
+}
+@keyframes rock {
+	0%{left: 1180px;}
+	100%{left: -210px;}
+} 
+.jump-animation{
+	animation: jump 0.5s;
+}
+@keyframes jump{
+	0%{top: 245px;}
+	50%{top: 20px;}
+	75%{top: 10px;}
+	100%{top: 245px;}
+}
