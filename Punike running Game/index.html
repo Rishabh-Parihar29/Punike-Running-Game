@@ -1,16 +1,67 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>document</title>
-	<link rel="stylesheet"  href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Punike Runner</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="game">
-  	<div id="dino"></div>
-  	<div id="rock"></div>
+  <div class="game-shell">
+    <div class="hud">
+      <div class="score-card">
+        <span>Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="score-card">
+        <span>Best</span>
+        <strong id="best-score">0</strong>
+      </div>
+      <div class="score-card">
+        <span>Speed</span>
+        <strong id="speed-level">x1.0</strong>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label for="level-select" class="level-label">Level</label>
+      <select id="level-select" aria-label="Choose level">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+        <option value="extreme" selected>Extreme</option>
+      </select>
+      <button id="start-button" type="button">Start Run</button>
+      <button id="pause-button" type="button" disabled>Pause</button>
+      <button id="sound-button" type="button" aria-pressed="true">Sound On</button>
+    </div>
+
+    <div id="game" aria-label="Punike running game">
+      <div class="scene-background scene-background-one" aria-hidden="true"></div>
+      <div class="scene-background scene-background-two" aria-hidden="true"></div>
+      <div class="sky-glow"></div>
+      <div class="sun"></div>
+      <div class="cloud cloud-one"></div>
+      <div class="cloud cloud-two"></div>
+      <div class="hills hills-back"></div>
+      <div class="hills hills-front"></div>
+      <div class="track"></div>
+      <div id="dino" aria-label="Player character"></div>
+      <div id="rock" aria-label="Obstacle"></div>
+      <div id="celebration" class="celebration" aria-hidden="true">
+        <strong id="celebration-label">🎉 500 POINTS! 🎉</strong>
+        <div id="confetti"></div>
+      </div>
+      <div id="message" class="message hidden" aria-live="polite">
+        <div class="message-card">
+          <h1 id="message-title">Ready?</h1>
+          <p id="message-detail"></p>
+        </div>
+      </div>
+    </div>
   </div>
-  <h1 id="score">0</h1>
+
   <script src="script.js"></script>
 </body>
 </html>
